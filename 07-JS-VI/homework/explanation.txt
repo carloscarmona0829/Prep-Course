@@ -1,0 +1,14 @@
+# Homework: Javascript VI 
+
+## Instrucciones Realizadas
+---
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+* Funciones Callback
+/*
+Es en Javascript la manera en la que una función recibe como argumento a otra función.
+Ej: function saludar(nombre){return "Hola " + nombre} esta función retorna un hola y el nombre que se pase como argumento luego hacemos la Callback como se verá a continuación.
+     function ejecutarSaludo(usuario, fun){return fun(usuario)}
+
+Es como si estuvieramos realizando una operación matemática con parentesis 5 (20/4) en la que primero se resuelve la operación de los parentesis y el resultado que esa operació devuelve, es con el que se realiza la siguiente operación.
+*/
