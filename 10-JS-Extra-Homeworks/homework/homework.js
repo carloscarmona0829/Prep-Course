@@ -18,21 +18,28 @@ function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
-  //Escribe tu código aquí
-  var cantidad = 0;
-  var pares = new Map();
+  //Escribe tu código aquí  
+  const array = [];
+  var obj = new Object();
   for (let i = 0; i < string.length; i++) {
+    var cantidad = 0;
     var caracter1 = string.charAt(i);
-    for (let j = 0; j < string.lenght; j++) {
-      var caracter2 = string.charAt(j);
-      if (caracter1 === caracter2) {
-        cantidad = cantidad + 1;
+    if (array.includes(caracter1) === false) {
+      for (let j = 0; j < string.length; j++) {
+        var caracter2 = string.charAt(j);
+        if (caracter1 === caracter2) {
+          cantidad = cantidad + 1;
+        }
       }
+      var nombrePerzonalizado = caracter1;
+      var valorPerzonalizado = cantidad;
+      obj[nombrePerzonalizado]=valorPerzonalizado;
     }
-    pares.set(caracter1, cantidad);
   }
-  return pares;
+  return obj;
 }
+  
+
 
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
